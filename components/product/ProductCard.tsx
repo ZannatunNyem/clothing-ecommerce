@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AddToCartButton from "./AddToCartButton";
 
 type Product = {
   id: string;
@@ -42,6 +43,15 @@ const ProductCard = ({ product }: ProductCardProps) => {
         >
           View Product
         </Link>
+
+        <AddToCartButton
+          product={{
+            _id: product.id,
+            name: product.name,
+            price: product.price,
+            image: product.image,
+          }}
+        />
       </div>
     </div>
   );
